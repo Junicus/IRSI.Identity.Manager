@@ -1,20 +1,27 @@
+import { NgModule, NgModuleFactoryLoader } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { UsersModule } from './users/users.module';
+
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
+
+import { routing } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    routing,
+    HttpModule,
+    SharedModule.forRoot(),
+    DashboardModule,
+    UsersModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<div class="idm-app">
+  <header class="idm-app-header">
+    <section class="idm-app-header-item">
+      <a class="idm-app-brand" routerLink="dashboard">ID Man</a>
+    </section>
+    <section class="idm-app-header-item idm-app-header-identity">
+      <!--<idm-identity></idm-identity>-->
+    </section>
+  </header>
+
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,11 @@
+<div class="idm-dashboard">
+  <div class="container">
+    <h1>User Resources</h1>
+    <div class="idm-dashboard-item" *ngFor="let item of items | dashboardFilter:usersFilter">
+      <a class="idm-dashboard-item-link" routerLink="{{item.path}}">
+        <div class="idm-dashboard-item-link-icon"><i class="{{item.icon}}"></i></div>
+        <div class="idm-dashboard-item-link-text">{{item.text}}</div>
+      </a>
+    </div>
+  </div>
+</div>
